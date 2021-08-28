@@ -81,21 +81,13 @@ Debian执行:
 
 #下载被控文件：
 
-```bash
-wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/ip_table && chmod +x ip_table
-```
-
-#设定定时任务：
-
-`crontab -e`
-
-`*/5 * * * * . /etc/profile;/root/ip_table key123 10.0.0.4 https://baidu.com/api`
+wget -O /root/ip_control.sh https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/ip_control.sh && chmod +x ip_control.sh && bash ip_control.sh
 
 #参数说明: 
 
 *key123 为 主控面板添加服务器后，分配的key
 
-*10.0.0.4 为主网卡上的IP，查看方法：`ip addr`。如果您的IP为公网IP，并且是动态IP，当IP变动时需要修改此处
+*10.0.0.4 为主网卡上的IP，查看方法：`ip addr`或者`ifconfig`。如果您的IP为公网IP，并且是动态IP，当IP变动时需要修改此处
 
 *https://baidu.com/api 为您的主控URI，请自行替换为您的域名
 
