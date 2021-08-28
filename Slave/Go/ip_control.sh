@@ -96,7 +96,7 @@ fi
 		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/brook -O /usr/bin/brook
 		chmod +x /usr/bin/brook
 	fi
-    read -p "请输入主控网址，例如https://zf.scrssr.com :" URL
+    read -p "请输入主控网址，例如:https://baidu.com/api :" URL
     read -p "请输入中转机密钥 :" KEY
     add_crontab "*/1 * * * * . /etc/profile;ip_table -url $URL -key $KEY   >> /root/iptables.log 2>&1"
 }
@@ -121,7 +121,7 @@ beikong1_chushihua(){
 		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/iptables_gost -O /usr/bin/iptables_gost
 		chmod +x /usr/bin/iptables_gost
 	fi
-	read -p "请输入主控网址，例如https://zf.scrssr.com :" URL
+	read -p "请输入主控网址，例如:https://baidu.com/api :" URL
     read -p "请输入落地机密钥 :" KEY
     add_crontab "*/1 * * * * . /etc/profile;iptables_gost -url $URL -key $KEY >> /root/iptables.log 2>&1"
 }
