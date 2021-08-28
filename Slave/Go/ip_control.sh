@@ -86,7 +86,7 @@ fi
 	echo "初始化完毕！"
 	read -p "是否安装被控端文件(首次执行必须安装)[y/N]" down_files
 	if [[ "$down_files" =~ ^[yY]$ ]]; then
-		echo "正在下载gost2.11版本"
+		echo "正在下载gost版本"
 		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/gost -O /usr/bin/gost
 		chmod +x /usr/bin/gost
 		echo "正在下载被控端"
@@ -114,7 +114,7 @@ beikong1_chushihua(){
 	echo "初始化完毕！"
 	read -p "是否下载被控端文件(首次执行必须安装)[y/N]" down_files_1
 	if [[ "$down_files_1" =~ ^[yY]$ ]]; then
-		echo "正在下载gost2.11版本"
+		echo "正在下载gost被控端"
 		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/gost -O /usr/bin/gost
 		chmod +x /usr/bin/gost
 		echo "正在下载被控端"
