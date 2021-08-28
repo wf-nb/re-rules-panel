@@ -53,7 +53,7 @@ fi
 	echo "请输入当前机器总带宽速率(单位Mbps)："
 	read -p "须为大于0的正整数: " port_speed
 	echo "开启iptables转发模块..."
-	echo -e "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+	echo -e "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 	sysctl -p
 	echo "正在清空防火墙..."
 	iptables -F
@@ -87,13 +87,13 @@ fi
 	read -p "是否安装被控端文件(首次执行必须安装)[y/N]" down_files
 	if [[ "$down_files" =~ ^[yY]$ ]]; then
 		echo "正在下载gost2.11版本"
-		wget https://zf.scrssr.com/sh/gost -O /usr/bin/gost
+		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/gost -O /usr/bin/gost
 		chmod +x /usr/bin/gost
 		echo "正在下载被控端"
-		wget https://zf.scrssr.com/sh/ip_table -O /usr/bin/ip_table
+		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/ip_table -O /usr/bin/ip_table
 		chmod +x /usr/bin/ip_table
 		echo "正在下载brook"
-		wget https://zf.scrssr.com/sh/brook -O /usr/bin/brook
+		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/brook -O /usr/bin/brook
 		chmod +x /usr/bin/brook
 	fi
     read -p "请输入主控网址，例如https://zf.scrssr.com :" URL
@@ -115,10 +115,10 @@ beikong1_chushihua(){
 	read -p "是否下载被控端文件(首次执行必须安装)[y/N]" down_files_1
 	if [[ "$down_files_1" =~ ^[yY]$ ]]; then
 		echo "正在下载gost2.11版本"
-		wget https://zf.scrssr.com/sh/gost -O /usr/bin/gost
+		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/gost -O /usr/bin/gost
 		chmod +x /usr/bin/gost
 		echo "正在下载被控端"
-		wget https://zf.scrssr.com/sh/iptables_gost -O /usr/bin/iptables_gost
+		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/iptables_gost -O /usr/bin/iptables_gost
 		chmod +x /usr/bin/iptables_gost
 	fi
 	read -p "请输入主控网址，例如https://zf.scrssr.com :" URL
