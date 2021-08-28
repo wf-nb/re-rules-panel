@@ -59,7 +59,7 @@ RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
 
 #开启转发(此处为逗比脚本)：
 
-`wget http://ftp.taoluyun.cc/iptables-pf.sh && chmod +x iptables-pf.sh`
+`wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/brook-pf.sh && chmod +x brook-pf.sh`
 
 然后执行 `./iptables-pf.sh` 执行选项1安装iptables
 
