@@ -87,13 +87,13 @@ fi
 	read -p "是否安装被控端文件(首次执行必须安装)[y/N]" down_files
 	if [[ "$down_files" =~ ^[yY]$ ]]; then
 		echo "正在下载gost版本"
-		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/gost -O /usr/bin/gost
+		wget https://github.com/wf-nb/re-rules-panel/raw/master/Slave/Go/gost -O /usr/bin/gost
 		chmod +x /usr/bin/gost
 		echo "正在下载被控端"
-		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/ip_table -O /usr/bin/ip_table
+		wget https://github.com/wf-nb/re-rules-panel/raw/master/Slave/Go/ip_table -O /usr/bin/ip_table
 		chmod +x /usr/bin/ip_table
 		echo "正在下载brook"
-		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/brook -O /usr/bin/brook
+		wget https://github.com/wf-nb/re-rules-panel/raw/master/Slave/Go/brook -O /usr/bin/brook
 		chmod +x /usr/bin/brook
 	fi
     read -p "请输入主控网址，例如:https://baidu.com/api :" URL
@@ -115,10 +115,10 @@ beikong1_chushihua(){
 	read -p "是否下载被控端文件(首次执行必须安装)[y/N]" down_files_1
 	if [[ "$down_files_1" =~ ^[yY]$ ]]; then
 		echo "正在下载gost被控端"
-		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/gost -O /usr/bin/gost
+		wget https://github.com/wf-nb/re-rules-panel/raw/master/Slave/Go/gost -O /usr/bin/gost
 		chmod +x /usr/bin/gost
 		echo "正在下载被控端"
-		wget https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/iptables_gost -O /usr/bin/iptables_gost
+		wget https://github.com/wf-nb/re-rules-panel/raw/master/Slave/Go/iptables_gost -O /usr/bin/iptables_gost
 		chmod +x /usr/bin/iptables_gost
 	fi
 	read -p "请输入主控网址，例如:https://baidu.com/api :" URL
