@@ -1,8 +1,8 @@
-![](https://raw.githubusercontent.com/Scholar-m/rules-panel/master/img/01.png)
+![](https://raw.githubusercontent.com/wf-nb/re-rules-panel/master/img/01.png)
 
-![](https://raw.githubusercontent.com/Scholar-m/rules-panel/master/img/02.png)
+![](https://raw.githubusercontent.com/wf-nb/re-rules-panel/master/img/02.png)
 
-![](https://raw.githubusercontent.com/Scholar-m/rules-panel/master/img/03.png)
+![](https://raw.githubusercontent.com/wf-nb/re-rules-panel/master/img/03.png)
 
 # 控制端部署：
 
@@ -61,7 +61,7 @@ RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
 
 `wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/brook-pf.sh && chmod +x brook-pf.sh`
 
-然后执行 `./iptables-pf.sh` 执行选项1安装iptables
+然后执行 `./brook-pf.sh` 执行选项1安装iptables
 
 #清空本地iptables规则（如果你是从nodejs被控端换过来，也必须执行此命令）
 
@@ -81,7 +81,7 @@ Debian执行:
 
 #下载被控文件：
 
-wget -O /root/ip_control.sh https://github.com/Scholar-m/rules-panel/raw/master/Slave/Go/ip_control.sh && chmod +x ip_control.sh && bash ip_control.sh
+wget -O /root/ip_control.sh https://github.com/wf-nb/re-rules-panel/raw/master/Slave/Go/ip_control.sh && chmod +x ip_control.sh && bash ip_control.sh
 
 #参数说明: 
 
